@@ -8,30 +8,24 @@
     ],
     "containerDefinitions": [
         {
-            "environment": [],
+            "environment": [
+                {
+                    "name": "NODE_ENV",
+                    "value": "production"
+                }
+            ],
             "name": "simple-app",
             "image": "410628466457.dkr.ecr.us-east-1.amazonaws.com/ecs-node-simple-app",
             "cpu": 10,
             "memory": 500,
             "portMappings": [
                 {
-                    "containerPort": 3000,
-                    "hostPort": 80
+                    "hostPort": 80,
+                    "containerPort": 80,
+                    "protocol": "tcp"
                 }
             ],
             "essential": true
-        },
-        {
-            "name": "busybox",
-            "image": "busybox",
-            "cpu": 10,
-            "memory": 500,
-            "volumesFrom": [
-            {
-              "sourceContainer": "simple-app"
-            }
-            ],
-            "essential": false
         }
     ]
 }
