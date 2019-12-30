@@ -1,0 +1,37 @@
+{
+    "family": "console-sample-app",
+    "volumes": [
+        {
+            "name": "my-vol",
+            "host": {}
+        }
+    ],
+    "containerDefinitions": [
+        {
+            "environment": [],
+            "name": "simple-app",
+            "image": "410628466457.dkr.ecr.us-west-2.amazonaws.com/ecs-nodejs-simple-app",
+            "cpu": 10,
+            "memory": 500,
+            "portMappings": [
+                {
+                    "containerPort": 3000,
+                    "hostPort": 80
+                }
+            ],
+            "essential": true
+        },
+        {
+            "name": "busybox",
+            "image": "busybox",
+            "cpu": 10,
+            "memory": 500,
+            "volumesFrom": [
+            {
+              "sourceContainer": "simple-app"
+            }
+            ],
+            "essential": false
+        }
+    ]
+}
