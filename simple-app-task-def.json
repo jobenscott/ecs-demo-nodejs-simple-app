@@ -10,7 +10,7 @@
         {
             "environment": [],
             "name": "simple-app",
-            "image": "410628466457.dkr.ecr.us-west-2.amazonaws.com/ecs-nodejs-simple-app",
+            "image": "410628466457.dkr.ecr.us-east-1.amazonaws.com/ecs-node-simple-app",
             "cpu": 10,
             "memory": 500,
             "portMappings": [
