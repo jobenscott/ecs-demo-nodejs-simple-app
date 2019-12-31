@@ -6,7 +6,7 @@ const app = express()
 
 app.get('/', (req, res) => res.status(200).json({status: 'ok'}))
 
-app.get('/', (request, response) => {
+app.get('/home', (request, response) => {
   return response.json('well, did it work?')
 })
 
