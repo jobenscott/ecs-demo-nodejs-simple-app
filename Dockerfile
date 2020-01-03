@@ -6,4 +6,4 @@ COPY ./entrypoint.sh /usr/src/app/entrypoint.sh
 RUN chmod +x /usr/src/app/entrypoint.sh
 RUN npm ci
 EXPOSE 80
-CMD [ "node", "server.js" ]
+# CMD [ "node", "server.js" ]
