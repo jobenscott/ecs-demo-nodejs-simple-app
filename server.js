@@ -8,7 +8,7 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => res.status(200).json({status: 'ok'}))
+app.get('/', (req, res) => res.status(200).json({status: 'we good'}))
 
 // MODULE ONE & TWO
 var basic_routing = require("./api/routes/basicRouting");
